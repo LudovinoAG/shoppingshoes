@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(/fonts/OpenSans-Bold.ttf);
+}
