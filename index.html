@@ -8,11 +8,56 @@
     <link rel="stylesheet" href="./css/fontawesome.min.css">
     <link rel="stylesheet" href="./css/regular.min.css">
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
     <title>The Grand Shop Shoes</title>
 </head>
 <body>
 
     <div class="container">
+        
+        <header class="header_">
+
+            <div class="header_logo_title_user">
+
+                <div class="logo_">
+                    <a href="#"><img src="./img/Logo.png" alt="The Grand Shop Shoes"></a>
+                </div>
+
+                <div class="title_">
+                    <h1>The GRAND Shop <span>Shoes</span></h1>
+                    <span class="title_slogan">Your excelent virtual store</span>
+                </div>
+
+                <div class="user_">
+                    <h2>Welcome,</h2>
+                    <h5><img src="./img/user.png" width="80px" alt=""></i> Visitor! <a href="#">Log In</a></h5>
+                </div>
+
+            </div>
+
+            <div class="header_nav_cart">
+                <nav class="header_nav">
+                    <ul>
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>Contact US</li>
+                        <li>About US</li>
+                        <li>My Orders</li>
+                        <li>Admin</li>
+                    </ul>
+                </nav>
+                <div class="header_cart">
+                    <button type="button" class="btn btn-secondary position-relative boton_Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                          99+
+                          <span class="visually-hidden">0</span>
+                        </span>
+                      </button>
+                </div>
+            </div>
+        </header>
+
 
     </div>
 
@@ -29,11 +74,5 @@
 <script src="./js/app.js"></script>
 
 
-<script>
-    const pagina = 'http://localhost:7000/portalzapatos/index.html';
-    setInterval(function() {
-        window.location.href = pagina;
-    }, 5000);
-</script>
 </body>
 </html>
