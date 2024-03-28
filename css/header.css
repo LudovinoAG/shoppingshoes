@@ -111,19 +111,34 @@
 }
 
 .header_cart{
+    position: relative;
     text-align: right;
-    margin-top: -10px;
-    margin-right: 10px;
+    margin-top: -20px;
+    margin-right: -10px;
+    z-index: 99999;
 }
 
 .header_cart .boton_Cart{
-  background-color: rgb(161, 9, 9);
+  background-color:white;
   border: 0px;
   box-shadow: 1px 1px 1px 1px black;
   border-radius: 100%;
+  width: 60px;
+  height: 60px;
 }
 
 .header_cart .boton_Cart:hover{
     background-color:  rgb(145, 146, 60);
-  }
+}
+
+
+.header_cart .boton_Cart .boton_text{
+    font-size: 1em;
+}
+
+.header_cart .boton_Cart img{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
 

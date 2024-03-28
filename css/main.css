@@ -1,0 +1,89 @@
+main .sliders{
+    width: 100%;
+    height: 600px;
+    margin-top: 52px;
+    z-index: 0;
+}
+
+main .sliders img{
+    width: 100%;
+    height: 600px;
+    image-orientation: flip;
+    z-index: 0;
+}
+
+main .sliders .boton_slider{
+    background-color: rgba(190, 110, 57, 20%);
+    width: 120px;
+}
+
+main .sliders .boton_slider .boton_slider_icon{
+    box-shadow: 2px 1px 1px 1px black;
+}
+
+.DayOffer_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+}
+
+.DayOffer_ img{
+    position: absolute;
+}
+
+.DayOffer_ .HR_{
+    width: 40%;
+    border-bottom: 1px solid black;
+    background-color: rgba(104, 25, 24, 100%);
+}
+
+.offers_{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(190, 110, 57, 25%);
+    padding: 20px 0;
+    
+}
+
+section .Offer_{
+    width: 300px;
+    box-shadow: 0px 1px 2px 0px black;
+}
+
+section .Offer_ .title_offer{
+    color: rgba(252, 0, 0, 1);
+    font-weight: bolder;
+}
+
+section .Offer_ .subtitle_offer{
+    color: black;
+    font-weight: bolder;
+}
+
+section .Offer_ a{
+    background-color: rgba(190, 110, 57, 69%);
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: black;
+    box-shadow: 0px 1px 1px 0px black;
+}
+
+.Offer_ .offer_img{
+    position: absolute;
+    width: 90px;
+    top: 180px;
+    left: 170px;
+}
+
+
+
+
+
