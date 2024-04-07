@@ -8,3 +8,38 @@
     font-family: 'OpenSans';
     src: url(/fonts/OpenSans-Bold.ttf);
 }
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+body .contenedor_{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.DayOffer_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.DayOffer_ img{
+    position: absolute;
+}
+
+.DayOffer_ .HR_{
+    width: 40%;
+    border-bottom: 1px solid black;
+    background-color: rgba(104, 25, 24, 100%);
+}

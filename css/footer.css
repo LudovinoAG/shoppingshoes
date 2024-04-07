@@ -17,8 +17,13 @@ footer .footer_section ul{
 footer .footer_section ul li a{
     text-decoration: none;
     font-size: 1.2em;
-    color: black;
     font-weight: bold;
+    color: brown;
+    
+}
+
+footer .footer_section ul li a:hover{
+    color: black;
     
 }
 
@@ -37,4 +42,5 @@ footer .social_media{
 
 footer .social_media img{
     margin-left: 20px;
+    width: 35px;
 }

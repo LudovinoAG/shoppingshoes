@@ -1,0 +1,136 @@
+.ProductList_{
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProductList_ h5{
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.DayOffer_{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.productList_List{
+    display: flex;
+    justify-content: space-between;
+}
+
+.productList_List .card{
+    margin-left: 10px;
+    box-shadow: 1px 0px 1px 0px black;
+    border: 0.5px solid rgba(104, 25, 24, 100%);
+}
+
+.productList_List .botton_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(104, 25, 24, 100%);
+    color: white;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.productList_List .botton_cart span{
+    display: block;
+}
+
+.productList_List .botton_cart img{
+    display: block;
+    width: 42px;
+    margin: 0px 20px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px 10px white;
+}
+
+.ProductList_section{
+    margin-bottom: 240px;
+    margin-top: 100px;
+}
+
+.Filter_Price_Range{
+    margin-bottom: 20px;
+}
+
+.Bottons_Filter{
+    margin-top: 20px;
+}
+
+.productList_List .list_pruduct{
+    max-width: 300px;
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.productList_List .list_pruduct #imgProduct{
+    width: auto;
+    height: 160px;
+}
+
+.productList_List .list_pruduct p{
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: justify;
+    margin-bottom: 0px;
+}
+
+.productList_List .list_pruduct .price{
+    margin-top: 10px;
+    font-weight: bolder;
+    color: darkblue;
+}
+
+.productList_List .list_pruduct .text_available{
+    display: block;
+    text-align: right;
+    color: brown;
+    font-weight: bold;
+    margin-top: 10px;
+  
+}
+
+.productList_List .list_pruduct .color_size{
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.productList_List .list_pruduct:hover{
+    background-color: lightgray;
+    box-shadow: 2px 1px 0px 0px black;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+.imgsProducts #VISOR_img{
+    width: 460px;
+    height: 310px;
+}
+
+.imgsProducts .imgsProducts_Secondary{
+    width: 60px;
+    margin-top: 10px;
+}
+
+.imgsProducts .imgsProducts_Secondary img{
+    margin-right: 10px;
+    transition: border 0.3s ease-in-out;
+}
+
+.imgsProducts .imgsProducts_Secondary img:hover{
+    cursor: pointer;
+    border: 1px solid grey;
+    transition: border 0.3s ease-in-out;
+}

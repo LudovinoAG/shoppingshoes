@@ -343,22 +343,47 @@ DELIMITER ;
 DELIMITER $$
 create procedure VerZapatos(
 	in filtro int,
-    in valor varchar(35)
+    in Parameter1 varchar(35),
+    in Parameter2 varchar(35),
+    in Parameter3 varchar(35),
+    in Parameter4 varchar(35)
 )
 begin
-	
     if filtro=1 then
-		select * from productos where color = valor;
+		select idproductos as ID, m.nombre as Marca, e.nombre as Estilo, e.descripcion as Description,  size, color, precio, existencia, ft_principal
+        from productos as p 
+        INNER JOIN marcas as m on m.idmarca=p.idmarca
+        INNER JOIN estilos as e on e.idestilo=p.idestilo
+        where color = Parameter1;
 	elseif filtro=2 then
-		select * from productos where size = valor;
+		select idproductos as ID, m.nombre as Marca, e.nombre as Estilo, e.descripcion as Description,  size, color, precio, existencia, ft_principal
+        from productos as p 
+        INNER JOIN marcas as m on m.idmarca=p.idmarca
+        INNER JOIN estilos as e on e.idestilo=p.idestilo
+        where size = Parameter2;
 	elseif filtro=3 then
-		select * from productos where idestilo = valor;
+		select idproductos as ID, m.nombre as Marca, e.nombre as Estilo, e.descripcion as Description,  size, color, precio, existencia, ft_principal
+        from productos as p 
+        INNER JOIN marcas as m on m.idmarca=p.idmarca
+        INNER JOIN estilos as e on e.idestilo=p.idestilo 
+        where e.nombre = Parameter3;
 	elseif filtro=4 then
-		select * from productos where idmarca = valor;
+		select idproductos as ID, m.nombre as Marca, e.nombre as Estilo, e.descripcion as Description,  size, color, precio, existencia, ft_principal
+        from productos as p 
+        INNER JOIN marcas as m on m.idmarca=p.idmarca
+        INNER JOIN estilos as e on e.idestilo=p.idestilo 
+        where m.nombre = Parameter4;
 	elseif filtro=5 then
-		select * from productos where precio between 0 and valor;
+		select idproductos as ID, m.nombre as Marca, e.nombre as Estilo, e.descripcion as Description,  size, color, precio, existencia, ft_principal
+        from productos as p 
+        INNER JOIN marcas as m on m.idmarca=p.idmarca
+        INNER JOIN estilos as e on e.idestilo=p.idestilo
+        where precio between 0 and valor;
 	else
-		select * from productos;
+		select idproductos as ID, m.nombre as Marca, e.nombre as Estilo, e.descripcion as Description,  size, color, precio, existencia, ft_principal
+        from productos as p 
+        INNER JOIN marcas as m on m.idmarca=p.idmarca
+        INNER JOIN estilos as e on e.idestilo=p.idestilo;
 	end if;
    
 end$$
@@ -367,10 +392,14 @@ DELIMITER ;
 -- Crear procedimiento para ver detalles del zapato
 DELIMITER $$
 create procedure VerZapatosDetallesID(
-	in idproductos int
+	in ID int
 )
 begin
-	select * from productos where idproductos=idproductos;
+		select idproductos as ID, m.nombre as Marca, e.nombre as Estilo, e.descripcion as Description,  size, color, precio, existencia, ft_principal, ft_alternative1, ft_alternative2
+        from productos as p 
+        INNER JOIN marcas as m on m.idmarca=p.idmarca
+        INNER JOIN estilos as e on e.idestilo=p.idestilo
+        WHERE idproductos=ID;
 end$$
 DELIMITER ;
 
@@ -393,7 +422,7 @@ select * from estilos;
 
 -- Crear vista de marcas
 create view ListarMarcas as
-select * from estatus;
+select * from marcas;
 
 -- Crear vista de pagos
 create view ListarPagos as
@@ -406,3 +435,7 @@ select * from perfiles;
 -- Crear vista de puestos
 create view ListarPuestos as
 select * from puestos;
+
+Call VerZapatosDetallesID(1);
+
+select * from ListarMarcas
